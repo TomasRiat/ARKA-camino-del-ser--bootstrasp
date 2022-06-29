@@ -1,0 +1,269 @@
+
+*{
+    overflow-x: hidden;
+}
+
+
+
+.c-indigo{
+    color: rgba(76, 0, 130, 0.86);
+}
+.c-white{
+    color:white;
+}
+.bg-indigo{
+    background-color: rgba(76, 0, 130, 0.86);
+}
+
+.size-video{
+    width: 100%;
+}
+
+.nav-item a:hover{
+    color: indigo;
+}
+
+@media(min-width:991px){
+    .nav-item a{
+        margin: 20px;
+    }
+}
+
+.texto{
+    padding:10px;
+    border: 5px solid indigo;
+    width: 100%;
+    margin-top:20px;
+    border-radius: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/**-----------------------------------------------MAIN YOGA--------------------------------------------------------------------------------**/
+
+
+:root{
+    --grid-width:250px;
+}
+
+.section-grid{
+    margin-left: 5px;
+    width: var(--grid-width);
+    border-left: 4px solid indigo;
+    border-bottom: 4px solid indigo;
+
+    box-sizing: content-box;
+    border-radius: 0.25rem;
+}
+
+.grid-1{
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-auto-rows: 120px;
+}
+
+@media screen and (min-width: 480px) {
+    :root{
+        --grid-width: 430px
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root{
+        --grid-width: 550px
+    }
+
+    .grid-1{
+        grid-template-columns: repeat(7, cacl(var(--grid-width) / 7));
+
+        grid-auto-rows: calc(var(--grid-width) / 7) ;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root{
+        --grid-width: 920px
+    }
+
+
+}
+    .grid-querie{
+        display: none;
+    }
+    
+    .grid-item{
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        transition: scale 150ms ease;
+    }
+    
+    .grid-item:hover{
+        scale: 1.02;
+        border-radius: 0.25rem;
+    }
+    
+    .grid-item img{
+        width: 100%;
+    }
+    
+    .grid-item-1{
+        background-image: url(../assets/img/yoga1.jpeg);
+    }
+    
+    .grid-item-2{
+        background-image: url(../assets/img/yoga2.jpeg);
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+    
+    .grid-item-3{
+        background-image: url(../assets/img/yoga3.jpeg);
+        grid-row-start: span 2;
+    }
+    
+    .grid-item-4{
+        background-image: url(../assets/img/yoga4.jpeg);
+        grid-column-start: span 2;
+    
+    }
+    
+    .grid-item-5{
+        background-image: url(../assets/img/yoga5.jpeg);
+        grid-column-start: span 3;
+        grid-row-start: span 2;
+    }
+    
+    .grid-item-6{
+        background-image: url(../assets/img/yoga6.jpeg);
+        grid-row-start: span 2;
+        grid-column-start: span 3;
+    }
+    
+    .grid-item-7{
+        background-image: url(../assets/img/yoga7.jpeg);
+        grid-row-start: span 2;
+        grid-column-start: span 2;
+    }
+
+
+@media screen and (min-width:600px) {
+
+    .grid-querie{
+        display: block;
+    }
+
+    .grid-item-1{
+        grid-column-start: span 3;
+        grid-row-start: span 3;
+    }
+    
+    .grid-item-2{
+        grid-column-start: span 4;
+        grid-row-start: span 4;
+    }
+    
+    .grid-item-3{
+        grid-row-start: 6;
+        grid-column-start: 5;
+        grid-row-end: span 2;
+        grid-column-end: span 2;
+    }
+    
+    .grid-item-4{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: span 3;
+    }
+    
+    .grid-item-5{
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+    
+    .grid-item-6{
+        grid-row-start: span 2;
+    }
+    
+    .grid-item-7{
+        grid-row-start: span 2;
+        grid-column-start: span 3;
+    }
+}
+
+
+
+/**----------------------------------------------------------------FOOTER--------------------------------------------------------------**/
+
+footer{
+    background-color: indigo;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.icons{
+    display: flex;
+    column-gap: 25px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+
+.icon{
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, backgroud-color;
+    transition-duration: .25s;
+}
+
+.icon:hover{
+    outline-offset: 4px;
+}
+
+.icon:hover i{
+    animation: shake .25s;
+}
+
+.icon--youtube:hover{
+    background: rgb(250,2,2);
+    background: radial-gradient(circle, rgba(250,2,2,1) 0%, rgba(5,0,2,1) 100%);
+    outline-color: rgb(143, 2, 2);
+}
+
+.icon--facebook:hover{
+    background: rgb(2,128,250);
+    background: radial-gradient(circle, rgba(2,128,250,1) 0%, rgba(5,0,2,1) 100%);
+    outline-color: rgb(0, 69, 138);;
+}
+
+.icon--inbox:hover{
+    background: rgb(131, 130, 130);
+    background: radial-gradient(circle, rgba(152,152,152,1) 0%, rgba(5,0,2,1) 100%);
+    outline-color: rgb(104, 104, 104);
+}
+
+.icon--whatsapp:hover{
+    background: rgb(5,255,0);
+    background: radial-gradient(circle, rgba(5,255,0,1) 0%, rgba(5,0,2,1) 100%);
+    outline-color: rgb(3, 109, 1);
+}
+
+@keyframes shake{
+    10%{transform: rotate(15deg);}
+    20%{transform: rotate(-15deg);}
+    30%{transform: rotate(15deg);}
+    40%{transform: rotate(-15deg);}
+}
